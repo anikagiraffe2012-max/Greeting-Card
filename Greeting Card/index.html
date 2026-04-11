@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Greeting Card Maker</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">🎴 CardCraft 🎴</div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Gallery</a>
+                <a href="#">About</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="maker-section">
+                <h1>Create your greeting card!</h1>
+                <p class="subtitle">Fill in these details to make your card!</p>
+
+                <div class="maker-container">
+                    <div class="controls">
+                        <div class="control-group">
+                            <label for="recipientName">Recipient's Name:</label>
+                            <input type="text" id="recipientName" placeholder="e.g., Anika" value="friend">
+                        </div>
+                        <div class="control-group">
+                            <label for="senderName">Your name:</label>
+                            <input type="text" id="senderName" placeholder="e.g., Anika" value="me">
+                        </div>
+                        <div class="control-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" rows="3" placeholder="Write a short message...">Wishing you a wonderful day</textarea>
+                        </div>
+                        <div class="control-group">
+                            <label for="bgColor">Background Color:</label>
+                            <select id="bgColor">
+                                <option value="#f8d7da">Soft Pink</option>
+                                <option value="#d4edda" selected>Soft Green</option>
+                                <option value="#d1ecf1">Soft Blue</option>
+                                <option value="#fff3cd">Soft Yellow</option>
+                                <option value="#e2d5f1">Soft Purple</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label for="fontStyle">Font Style:</label>
+                            <select id="fontStyle">
+                                <option value="'Segoe UI', Arial, sans-serif" selected>Normal</option>
+                                <option value="'Brush Script MT', cursive">Cursive</option>
+                                <option value="'Courier New', monospace">Monospace</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label for="borderStyle">Border Style:</label>
+                            <select id="borderStyle">
+                                <option value="solid" selected>Solid</option>
+                                <option value="dashed">Dashed</option>
+                                <option value="double">Double</option>
+                            </select>
+                        </div>
+                        <div class="button-group">
+                            <button type="button" id="resetBtn">Reset to Default</button>
+                            <button type="button" id="downloadBtn">Download Card</button>
+                        </div>
+                    </div>
+                    <div class="preview">
+                        <h2>Preview</h2>
+                        <div id="cardPreview" class="card">
+                            <h3 id="previewRecipient">Dear Friend,</h3>
+                            <p id="previewMessage">Wishing you a wonderful day!</p>
+                            <p id="previewSender">From, Me</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Card Craft - anika's website! </p>
+        </footer>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</html>
